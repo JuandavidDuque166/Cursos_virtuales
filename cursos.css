@@ -19,6 +19,7 @@ header {
   align-items: center;
   background: rgba(0, 0, 60, 0.6);
   padding: 15px 40px;
+  flex-wrap: wrap;
 }
 
 .logo-container {
@@ -27,15 +28,25 @@ header {
 }
 
 .logo {
-  width: 50px;
-  margin-right: 10px;
+  width: 60px;
+  margin-right: 20px;
 }
+
+  nav a.inicio{
+    border-bottom: 2px solid white;
+    padding-bottom: 4px;
+  }
 
 nav a {
   color: white;
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
 }
 
 .ingresar {
@@ -48,6 +59,14 @@ nav a {
   cursor: pointer;
   margin-right: 20px;
   transition: all 0.3s ease; 
+}
+
+  input[type="password"] {
+  margin-bottom: 15px; 
+}
+
+button, input[type="submit"] {
+  margin-top: 10px;
 }
 
 .ingresar:hover {
@@ -78,12 +97,12 @@ img{
 }
 
 .texto h2 {
-  font-size: 45px;
+  font-size: 80px;
   line-height: 1.2;
 }
 
 .texto span {
-  font-size: 65px;
+  font-size: 50px;
   font-weight: bold;
   color: #fff;
 }
@@ -210,8 +229,125 @@ img{
 
 /*Terminos y condiciones*/
 .terminos {
-  margin: 15px 0;           
-  display: inline-flex;  /* para alinear horizontalmente */     
-  align-items: center;      /* centra verticalmente */
-  font-size: 11px;
+  margin: 10px 0;           
+  display: inline-flex;
+  gap: 10px;     
+  align-items: center; 
+  white-space: nowrap;     
+  font-size: 15px;
+}
+
+.footer {
+    margin-top: 0; 
+    padding: 40px 20px;
+    background: linear-gradient(to right, #6A1B9A, #2196F3);
+    text-align: center;
+    color: white;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+
+.footer-content h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer-content p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.modal {
+    font-size: 20px;
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal:target {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+/* Fondo oscuro del modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Caja blanca del modal */
+.modal-content {
+  background: #9249c7;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  position: relative;
+  animation: aparecer 0.3s ease;
+}
+
+/* Animación de entrada */
+@keyframes aparecer {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Botón cerrar */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Botón inscribirme */
+.inscribirme {
+  display: block;
+  margin-top: 15px;
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Mostrar modal con :target */
+.modal:target {
+  display: flex;
 }
