@@ -1,0 +1,217 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: url("bg-betowa.png") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 60, 0.6);
+  padding: 15px 40px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  margin-right: 10px;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.ingresar {
+  background: white;
+  color: #28a745; 
+  border: 2px solid #28a745;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 20px;
+  transition: all 0.3s ease; 
+}
+
+.ingresar:hover {
+  background: #28a745; 
+  color: white; 
+}
+
+.registrarse {
+  background: #6a0dad;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+img{
+  margin-top:20px;
+}
+
+.contenido {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  flex-direction: row; 
+}
+
+.texto h2 {
+  font-size: 45px;
+  line-height: 1.2;
+}
+
+.texto span {
+  font-size: 65px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.personaje img {
+  width: 300px;
+}
+.form-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.formulario {
+  background: white;
+  color: black;
+  padding: 30px;
+  border-radius: 12px;
+  width: 350px;
+}
+
+.formulario label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.formulario input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.volver {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Sección productos */
+.productos {
+  padding: 50px 80px;
+  text-align: center;
+}
+
+.productos h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px; 
+}
+
+/* Tarjeta de producto */
+.card-producto {
+  background: white;
+  color: black;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-producto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.info-producto {
+  padding: 20px;
+  text-align: left;
+  flex: 1; 
+}
+
+.categoria {
+  font-size: 14px;
+  color: #6a0dad;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.info-producto h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  min-height: 50px; 
+}
+
+.fecha {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 15px;
+}
+
+.btn-ver {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-ver:hover {
+  background: #218838;
+}
+
+.card-producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+/*Terminos y condiciones*/
+.terminos {
+  margin: 15px 0;           
+  display: inline-flex;  /* para alinear horizontalmente */     
+  align-items: center;      /* centra verticalmente */
+  font-size: 11px;
+}
